@@ -6,8 +6,11 @@ console.log(Object.keys(simple_obj));
 let person = {
     name: 'Jack',
     age: 25
-  };
-  
+};
+
+let { age } = person;       // Creates a variable 'age' from object 'person.age'
+console.log(age)
+
 let keys = Object.keys(person)
 console.log(keys);
 
@@ -60,3 +63,8 @@ pets.push('duck');
 pets.reverse();     // lots of methods like sorting, slices etc...
 small = pets.slice(1);
 console.log(small);
+
+// use commas to initialise undefined in array
+var a = ['dog', , 'hen'];
+console.log(a[1]);
+console.log(a.length);
