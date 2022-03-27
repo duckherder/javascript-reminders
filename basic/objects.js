@@ -3,16 +3,24 @@
 simple_obj = Object();
 console.log(Object.keys(simple_obj));
 
-let person = {
+let person = {      // construction using object initializers
     name: 'Jack',
     age: 25
 };
+
+function Person(name, age) {        // Constructor function
+    this.name = name;
+    this.age = age;
+}
+let bob = new Person('bob', 95);    // Initialization using constructor function
 
 let { age } = person;       // Creates a variable 'age' from object 'person.age'
 console.log(age)
 
 let keys = Object.keys(person)
 console.log(keys);
+
+console.log('age in person: ' + person.hasOwnProperty('age'));
 
 // different ways to access properties
 console.log(person.name);
@@ -26,6 +34,8 @@ console.log(person.location.door);
 // you can delete object properties
 delete person.age;                      // not recommended to delete array elements
 console.log(person);
+console.log('age in person: ' + person.hasOwnProperty('age'));
+console.log(Object.getOwnPropertyNames(person));
 
 for (var item in person) {
     console.log(item + ': ' + person[item]);
