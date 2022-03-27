@@ -73,3 +73,14 @@ console.log(1 == true); // true
 // To avoid type coercion, use the triple-equals operator (also !==)
 console.log(123 === '123'); // false
 console.log(1 === true);    // false
+
+// Javascript is dynamically typed so below is ok
+var my_var = 23;
+console.log(my_var);
+my_var = 'hello!';
+console.log(my_var);
+
+// alternative variable assignment
+let [my_name, age] = ['bob', 25];
+console.log(my_name);
+console.log(age);
