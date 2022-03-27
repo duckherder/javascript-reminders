@@ -32,5 +32,5 @@ switch (action) {
         console.log('eating');
         break;
     default:
-        break;
+        break;      // C-style break and continues are also supported in JS
 }

@@ -84,3 +84,12 @@ console.log(my_var);
 let [my_name, age] = ['bob', 25];
 console.log(my_name);
 console.log(age);
+
+// chaining of assignments is not recommended
+myfunc = function my_silly_func() {
+    let zz = yy = xx = 15;  // let only refers to zz
+}
+myfunc();
+//console.log(zz);    // reference error
+console.log(yy);    // global variable - not expected
+console.log(xx);    // global variable - not expected

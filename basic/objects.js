@@ -24,7 +24,7 @@ console.log(person);
 console.log(person.location.door);
 
 // you can delete object properties
-delete person.age
+delete person.age;                      // not recommended to delete array elements
 console.log(person);
 
 for (var item in person) {
@@ -60,7 +60,7 @@ console.log('foreach...');
 
 var pets = ['dog', 'cat', 'hen'];
 pets.push('duck');
-pets.reverse();     // lots of methods like sorting, slices etc...
+pets.reverse();     // lots of methods like sorting, map, filter, every, slices etc...
 small = pets.slice(1);
 console.log(small);
 
