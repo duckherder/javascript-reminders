@@ -68,6 +68,10 @@ console.log(iife);
 iife = ((x,y) => x % y)(4,3);   // remove return and braces as automatically implied
 console.log(iife);
 
+// with single parameter can get away without()
+let my_arrow_func = x => x * 2;     // same as function double(x) {return x * 2;}
+console.log(my_arrow_func(7));
+
 // you can modify an object in a function
 my_obj = Object();
 function my_func(obj)
