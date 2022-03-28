@@ -3,42 +3,49 @@
 simple_obj = Object();
 console.log(Object.keys(simple_obj));
 
-let person = {      // construction using object initializers
+let jack = {      // construction using object initializers
     name: 'Jack',
     age: 25
 };
+console.log(jack);
+
+let person_name = 'Tony';
+let person_age = 25;
+let tony = {person_name, person_age};   // create from existing variables
+console.log(tony);                      // variable names will become the keys
 
 function Person(name, age) {        // Constructor function
     this.name = name;
     this.age = age;
 }
 let bob = new Person('bob', 95);    // Initialization using constructor function
+console.log(bob);
 
-let { age } = person;       // Creates a variable 'age' from object 'person.age'
+let { age } = jack;       // Creates a variable 'age' from object 'jack.age'
 console.log(age)
 
-let keys = Object.keys(person)
+let keys = Object.keys(jack)
 console.log(keys);
 
-console.log('age in person: ' + person.hasOwnProperty('age'));
+console.log('age in person: ' + jack.hasOwnProperty('age'));
 
 // different ways to access properties
-console.log(person.name);
-console.log(person['age']);
+console.log(jack.name);
+console.log(jack['age']);
 
 // add a new property which could be an object
-person.location = {street: 'high st', door: 23};
-console.log(person);
-console.log(person.location.door);
+jack.location = {street: 'high st', door: 23};
+console.log(jack);
+console.log(jack.location.door);
 
 // you can delete object properties
-delete person.age;                      // not recommended to delete array elements
-console.log(person);
-console.log('age in person: ' + person.hasOwnProperty('age'));
-console.log(Object.getOwnPropertyNames(person));
+delete jack.age;                      // not recommended to delete array elements
+console.log(jack);
+console.log('age in jack: ' + jack.hasOwnProperty('age'));
+console.log(Object.getOwnPropertyNames(jack));
 
-for (var item in person) {
-    console.log(item + ': ' + person[item]);
+for (var item in jack) {
+    console.log(item + ': ' + jack[item]);
 }
 
 console.log('Arrays....')
