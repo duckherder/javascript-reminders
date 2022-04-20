@@ -2,7 +2,7 @@ let good_promise = new Promise( (resolve, reject) => {
     setTimeout(() => resolve("ok"), 1000);   // where we do the work that may sleep or wait
   });                                        // when timeout completes the timer will call
                                              // the resolve (gone ok) function
-
+                                             
 console.log('good_promise created...');
 console.log(good_promise);
 
@@ -49,3 +49,7 @@ let promise3 = promise2.then(result => {
     console.log(result);
     return new Promise(resolve => setTimeout(() => resolve("promise 2 is resolved"), 1000))});
 promise3.then(result => console.log(result));
+
+// a promise can have multiple handlers which will all
+// be called when a promise is resolved
+promise3.then(result => console.log(result.toUpperCase()));
